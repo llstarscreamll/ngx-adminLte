@@ -1,0 +1,21 @@
+@import '~loaders.css/loaders.min.css';
+
+:host {
+  display: block;
+  height: 140px;
+}
+
+.loader-container > div {
+  background-color: rgba(51, 122, 183, 0.6);
+}
+
+.loader-container {
+  display: block;
+  margin: auto;
+  margin-top: 40px;
+}
+
+.text-center {
+  margin-top: 10px;
+  color: rgba(51, 122, 183, 0.7);
+}
