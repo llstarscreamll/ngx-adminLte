@@ -6,7 +6,7 @@ This is a module theme for Angular2+ apps. Optimized to be used with [Hello-Angu
 - Top navbar
 - Middle box (for login, register, etc)
 
-In the sidebar component the `[userCanAny]` directives is used to show/hide menu items for the current logged in user based on his permissions.
+In the sidebar component the `[userCanAny]` directives is used to show/hide menu items for the current logged in user based on his permissions. Take a look at the Hello-Angular `src/app/menu.ts` file to know how to build the menu array object to be used on the sidebar component.
 
 ## Install
 
