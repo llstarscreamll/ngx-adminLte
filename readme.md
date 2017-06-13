@@ -17,6 +17,9 @@ npm i --save bootstrap
 npm i --save admin-lte
 npm i --save loaders.css
 npm i --save font-awesome
+npm i --save lodash
+npm i --save @ngx-translate/core
+npm i --save ngx-bootstrap
 git clone https://github.com/llstarscreamll/ngx-adminLte.git src/app/adminLTE
 ```
 
