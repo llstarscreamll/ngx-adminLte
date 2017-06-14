@@ -5,6 +5,7 @@
 ### Added
 
 - Add **loader component** based on the [loaders.css](https://connoratherton.com/loaders) library.
+- Add dependencies install info on readme.
 
 ### Changed
 
