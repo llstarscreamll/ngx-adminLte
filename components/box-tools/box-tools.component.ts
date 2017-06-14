@@ -12,7 +12,7 @@ import { Component, EventEmitter, HostBinding, Input, OnInit, Output } from '@an
 export class BoxToolsComponent implements OnInit {
 
   @HostBinding('class')
-  public classes: string = 'box-tools pull-right';
+  public classes = 'box-tools pull-right';
 
   @Output()
   public collapseBox = new EventEmitter<boolean>();
@@ -21,13 +21,13 @@ export class BoxToolsComponent implements OnInit {
   public hideBox = new EventEmitter<boolean>();
 
   @Input()
-  public showCollapseBtn: boolean = true;
+  public showCollapseBtn = true;
 
   @Input()
-  public showRemoveBtn: boolean = true;
+  public showRemoveBtn = true;
 
-  public collapse: boolean = false;
-  public collapseIcon: string = 'fa fa-minus';
+  public collapse = false;
+  public collapseIcon = 'fa fa-minus';
 
   public constructor() { }
 

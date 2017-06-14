@@ -28,11 +28,11 @@ describe('FooterComponent', () => {
   });
 
   it('should show app copy right', () => {
-    component.app_fullname = "ACME Inc.";
+    component.app_fullname = 'ACME Inc.';
     fixture.detectChanges();
 
-    let copyRightElem = fixture.debugElement.query(By.css('.app-copy-right'));
+    const copyRightElem = fixture.debugElement.query(By.css('.app-copy-right'));
 
-    expect(copyRightElem.nativeElement.textContent).toContain("ACME Inc.");
+    expect(copyRightElem.nativeElement.textContent).toContain('ACME Inc.');
   });
 });

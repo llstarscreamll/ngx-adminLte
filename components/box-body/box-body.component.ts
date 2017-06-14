@@ -8,7 +8,7 @@ import { Component, HostBinding, OnInit } from '@angular/core';
 export class BoxBodyComponent implements OnInit {
 
   @HostBinding('class')
-  public classes: string = 'box-body';
+  public classes = 'box-body';
 
   public constructor() { }
 

@@ -30,7 +30,7 @@ import { AppMessage } from './../../../core/models/appMessage';
 export class AlertsComponent implements OnInit, OnDestroy {
 
   @Input()
-  public showErrors: boolean = true;
+  public showErrors = true;
 
   @Input()
   public appMessage: AppMessage;
@@ -38,8 +38,8 @@ export class AlertsComponent implements OnInit, OnDestroy {
   @Output()
   public closed: EventEmitter<boolean> = new EventEmitter();
 
-  public icon: string = '';
-  public dismissTime: number = 30000;
+  public icon = '';
+  public dismissTime = 30000;
 
   public constructor(private store: Store<fromRoot.State>) { }
 
@@ -47,12 +47,12 @@ export class AlertsComponent implements OnInit, OnDestroy {
 
   public ngOnDestroy() { }
 
-  public isObject(messages: any):boolean {
+  public isObject(messages: any): boolean {
     return isObject(messages);
   }
 
   public getErrorsArray(Obj: Object) {
-    let array = [];
+    const array = [];
 
     forOwn(Obj, (value) => {
       array.push(value);

@@ -16,7 +16,7 @@ export class MainTopNavbarComponent implements OnInit {
 
   @Input()
   public authState;
-  
+
   public company_cc_year = env.company_cc_year;
   public company_website = env.company_website;
   public app_fullname = env.app_fullname;

@@ -36,14 +36,14 @@ describe('MiddleBoxLayoutComponent', () => {
 
   it('should show the App name on page header', () => {
     component.ngOnInit();
-    component.app_fullname = "ACME Inc.";
-    component.app_short_name = "ACME";
+    component.app_fullname = 'ACME Inc.';
+    component.app_short_name = 'ACME';
 
     fixture.detectChanges();
-    
-    let appNameElem = fixture.debugElement.query(By.css('div.login-logo'));
 
-    expect(appNameElem.nativeElement.textContent).toContain("ACME");
+    const appNameElem = fixture.debugElement.query(By.css('div.login-logo'));
+
+    expect(appNameElem.nativeElement.textContent).toContain('ACME');
   });
 
 });

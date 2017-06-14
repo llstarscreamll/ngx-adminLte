@@ -25,7 +25,7 @@ import { environment as env } from './../../../../environments/environment';
 export class MiddleBoxLayoutComponent implements OnInit {
 
   @HostBinding('class')
-  public classes: string = 'login-page';
+  public classes = 'login-page';
 
   public company_cc_year = env.company_cc_year;
   public company_website = env.company_website;

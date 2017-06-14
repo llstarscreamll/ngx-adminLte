@@ -12,16 +12,16 @@ describe('AdminLTE AlertsComponent', () => {
   let component: AlertsComponent;
   let fixture: ComponentFixture<AlertsComponent>;
   let store: Store<fromRoot.State>;
-  let defaultMsg = {
+  const defaultMsg = {
     type: '',
     errors: {},
     message: '',
     date: new Date(),
     status_code: null
   };
-  let emailError = 'bad email!!';
-  let passwordError = 'weak password!!';
-  let message = 'Invalid input.';
+  const emailError = 'bad email!!';
+  const passwordError = 'weak password!!';
+  const message = 'Invalid input.';
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -69,7 +69,7 @@ describe('AdminLTE AlertsComponent', () => {
     defaultMsg.type = 'warning';
     fixture.detectChanges();
 
-    expect(component.getErrorsArray(defaultMsg.errors)).toEqual([emailError, passwordError]);;
+    expect(component.getErrorsArray(defaultMsg.errors)).toEqual([emailError, passwordError]); ;
   });
 
   it('should display errors on ul list', () => {

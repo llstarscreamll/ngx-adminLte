@@ -8,9 +8,9 @@ import { CollapseModule } from 'ngx-bootstrap/collapse';
 import { AlertModule } from 'ngx-bootstrap/alert';
 
 import { reducer } from './../reducers';
-import { AuthSharedModule } from "app/auth/auth-shared.module";
-import { CoreSharedModule } from "app/core/core.shared.module";
-import { Directive, Input } from "@angular/core";
+import { AuthSharedModule } from 'app/auth/auth-shared.module';
+import { CoreSharedModule } from 'app/core/core.shared.module';
+import { Directive, Input } from '@angular/core';
 
 export const IMPORTS = [
   TranslateModule.forRoot(),

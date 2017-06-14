@@ -9,7 +9,7 @@ import { CoreSharedModule } from './../core/core.shared.module';
 
 import { LAYOUTS } from './layouts';
 import { COMPONENTS } from './components';
-import { AuthSharedModule } from "app/auth/auth-shared.module";
+import { AuthSharedModule } from 'app/auth/auth-shared.module';
 
 @NgModule({
   imports: [

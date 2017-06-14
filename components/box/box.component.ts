@@ -8,18 +8,18 @@ import { Component, Input, HostBinding, OnInit } from '@angular/core';
 export class BoxComponent implements OnInit {
 
   @Input()
-  public isLoading: boolean = false;
+  public isLoading = false;
 
   @HostBinding('class')
-  public classes: string = 'box box-solid';
+  public classes = 'box box-solid';
 
   @HostBinding('class.hide')
   @Input()
-  public hidden: boolean = false;
+  public hidden = false;
 
   @HostBinding('class.collapsed-box')
   @Input()
-  public collapse: boolean = false;
+  public collapse = false;
 
   public constructor() { }
 
