@@ -13,12 +13,7 @@ import { AuthSharedModule } from "app/auth/auth-shared.module";
 
 @NgModule({
   imports: [
-    CommonModule,
-    RouterModule,
-    TranslateModule,
-    Ng2BootstrapModule.forRoot(),
     CoreSharedModule,
-    AuthSharedModule,
   ],
   providers: [],
   declarations: [...COMPONENTS, ...LAYOUTS],
