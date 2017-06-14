@@ -12,7 +12,7 @@ import { Component, HostBinding, OnInit } from '@angular/core';
 export class BoxFooterComponent implements OnInit {
 
   @HostBinding('class')
-  public classes: string = 'box-footer';
+  public classes = 'box-footer';
 
   public constructor() { }
 

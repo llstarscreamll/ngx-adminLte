@@ -13,7 +13,7 @@ describe('AdminLTE UserAccountMenuComponent', () => {
   let component: UserAccountMenuComponent;
   let fixture: ComponentFixture<UserAccountMenuComponent>;
   let store: Store<fromRoot.State>;
-  let user = TEST_USER;
+  const user = TEST_USER;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -46,7 +46,7 @@ describe('AdminLTE UserAccountMenuComponent', () => {
 
   it('should show the user name', () => {
     fixture.detectChanges();
-    let element = fixture.debugElement.nativeElement;
+    const element = fixture.debugElement.nativeElement;
     expect(element.querySelector('ul li.user-header span.username').textContent).toContain('Super Admin');
     expect(element.querySelector('li.dropdown.user-menu span.username').textContent).toContain('Super Admin');
   });

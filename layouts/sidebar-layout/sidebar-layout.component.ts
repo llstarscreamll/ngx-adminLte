@@ -70,9 +70,9 @@ export class SidebarLayoutComponent implements AfterViewInit, OnInit {
    * Fix the page height.
    */
   public fixHeight() {
-    let sidebarHeight: number = this.sidebar.element.nativeElement.offsetHeight;
-    let headerHeight: number = this.header.element.nativeElement.offsetHeight;
-    let footerHeight: number = this.footer.element.nativeElement.offsetHeight;
+    const sidebarHeight: number = this.sidebar.element.nativeElement.offsetHeight;
+    const headerHeight: number = this.header.element.nativeElement.offsetHeight;
+    const footerHeight: number = this.footer.element.nativeElement.offsetHeight;
     let minHeight: number = this.viewPortHeight - headerHeight;
 
     // window height >= sidebar height?

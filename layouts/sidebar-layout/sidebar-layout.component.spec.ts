@@ -15,13 +15,13 @@ import * as authActions from './../../../auth/actions/auth.actions';
 
 import { IMPORTS } from './../../utils';
 import { TEST_USER, COMPANY } from './../../../core/tests/util';
-import { AUTH_TESTING_COMPONENTS } from "app/auth/utils/auth-testing-utils";
+import { AUTH_TESTING_COMPONENTS } from 'app/auth/utils/auth-testing-utils';
 
 describe('AdminLTE SidebarLayoutComponent', () => {
   let component: SidebarLayoutComponent;
   let fixture: ComponentFixture<SidebarLayoutComponent>;
   let store: Store<fromRoot.State>;
-  let user = TEST_USER;
+  const user = TEST_USER;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -48,6 +48,6 @@ describe('AdminLTE SidebarLayoutComponent', () => {
     tick();
 
     expect(store.select).toHaveBeenCalledWith(fromRoot.getAuthState);
-    
+
   }));
 });

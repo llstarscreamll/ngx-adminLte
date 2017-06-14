@@ -9,13 +9,13 @@ import { IMPORTS } from './../../utils';
 import { TEST_USER } from './../../../core/tests/util';
 import * as fromRoot from './../../../reducers';
 import * as authActions from './../../../auth/actions/auth.actions';
-import { AUTH_TESTING_COMPONENTS } from "app/auth/utils/auth-testing-utils";
+import { AUTH_TESTING_COMPONENTS } from 'app/auth/utils/auth-testing-utils';
 
 describe('AdminLTE MainSidebarComponent', () => {
   let component: MainSidebarComponent;
   let fixture: ComponentFixture<MainSidebarComponent>;
   let store: Store<fromRoot.State>;
-  let user = TEST_USER;
+  const user = TEST_USER;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -38,7 +38,7 @@ describe('AdminLTE MainSidebarComponent', () => {
   });
 
   it('should show the user info on sidebar top area', () => {
-    let userNameZone1 = fixture.debugElement.query(By.css('span.username')).nativeElement;
+    const userNameZone1 = fixture.debugElement.query(By.css('span.username')).nativeElement;
     expect(userNameZone1.textContent).toEqual(user.name);
   });
 
@@ -46,7 +46,7 @@ describe('AdminLTE MainSidebarComponent', () => {
     component.user = undefined;
     fixture.detectChanges();
 
-    let userNameZoneWrapper = fixture.debugElement.query(By.css('div.user-panel'));
+    const userNameZoneWrapper = fixture.debugElement.query(By.css('div.user-panel'));
     expect(userNameZoneWrapper).toBeNull();
   });
 });

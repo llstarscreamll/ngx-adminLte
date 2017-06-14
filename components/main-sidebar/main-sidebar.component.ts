@@ -15,7 +15,7 @@ export class MainSidebarComponent implements OnInit {
   public menuItems: MenuItem[] = MENU;
 
   public selectedItemIndex: number = -1;
-  
+
   public constructor(public element: ElementRef) { }
 
   public ngOnInit() { }

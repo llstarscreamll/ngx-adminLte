@@ -30,7 +30,7 @@ export class NavTopLayoutComponent implements OnInit {
 
   public authState$: Observable<AuthState>;
 
-  public collapseNavBar: boolean = true;
+  public collapseNavBar = true;
   public viewPortHeight: number = window.innerHeight;
 
   public company_cc_year = env.company_cc_year;
@@ -48,7 +48,7 @@ export class NavTopLayoutComponent implements OnInit {
     this.authState$ = this.store.select(fromRoot.getAuthState);
 
     // fix the height
-    let height = window.innerHeight - (this.header.nativeElement.offsetHeight + 2);
+    const height = window.innerHeight - (this.header.nativeElement.offsetHeight + 2);
     this.renderer.setElementStyle(this.wrapper.nativeElement, 'min-height', height + 'px');
   }
 
