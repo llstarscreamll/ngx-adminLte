@@ -13,7 +13,7 @@ import { TranslateService } from "@ngx-translate/core";
   selector: 'app-nav-top-layout',
   templateUrl: './nav-top-layout.component.html',
   styleUrls: [
-    './nav-top-layout.component.css',
+    './../../styles.css',
   ],
   encapsulation: ViewEncapsulation.None,
   changeDetection: ChangeDetectionStrategy.OnPush,

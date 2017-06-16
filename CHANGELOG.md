@@ -1,5 +1,21 @@
 # Release Notes.
 
+## 0.4 (2017-06-16)
+
+### Added
+
+- Add language switcher for **spanish** and **english**.
+- Use translations on all components templates.
+
+### Changed
+
+- Move styles imports to `styles.css` file.
+
+### Removed
+
+- Remove unused links on user account menu.
+- Remove unused imports on module.
+
 ## 0.1.1 (201-06-13)
 
 ### Added

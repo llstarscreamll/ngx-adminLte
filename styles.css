@@ -1,3 +1,9 @@
+@import '~admin-lte/dist/css/AdminLTE.min.css';
+@import '~admin-lte/dist/css/skins/_all-skins.min.css';
+
+/* style for active language on dropdown */
+.active-lang { margin-top: 4px; }
+
 /* Margins */
 .m-xxs {
   margin: 2px 4px;

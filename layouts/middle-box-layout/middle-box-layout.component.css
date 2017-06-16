@@ -1,6 +1,4 @@
 body {background: #d2d6de; }
-@import '~admin-lte/dist/css/AdminLTE.min.css';
-@import '~admin-lte/dist/css/skins/_all-skins.min.css';
 
 .login-logo, .register-logo {
   font-size: 0 !important;
