@@ -17,7 +17,7 @@
           <div [collapse]="collapseNavBar" class="collapse navbar-collapse pull-left">
 
             <ul class="nav navbar-nav">
-              <li><a routerLink="/welcome">BackOffice</a></li>
+              <li *ngIf="(authState$ | async)?.loggedIn"><a routerLink="/welcome" translate>SHELL.Dashboard</a></li>
             </ul>
 
             <!-- Search Form -->
@@ -41,7 +41,7 @@
             
             <ul *ngIf="!(authState$ | async)?.loggedIn" class="nav navbar-nav">
               <li><a class="login-link" routerLink="/auth/login" translate>SHELL.Login</a></li>
-              <li><a class="sign-up-link" routerLink="/auth/register" translate>SHELL.Sign in</a></li>
+              <li><a class="sign-up-link" routerLink="/auth/register" translate>SHELL.Sign up</a></li>
             </ul>
 
           </div>
