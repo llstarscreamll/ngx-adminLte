@@ -7,6 +7,7 @@ import { environment as env } from './../../../../environments/environment';
 import { State as AuthState } from './../../../auth/reducers/auth.reducer';
 import * as fromRoot from './../../../reducers';
 import { MainFooterComponent } from './../../components/footer/footer.component';
+import { TranslateService } from "@ngx-translate/core";
 
 @Component({
   selector: 'app-nav-top-layout',
@@ -39,17 +40,27 @@ export class NavTopLayoutComponent implements OnInit {
   public app_short_name = env.app_short_name;
   public app_version = env.app_version;
 
-  constructor(
+  public activeLang: string;
+
+  public constructor(
     private store: Store<fromRoot.State>,
-    private renderer: Renderer
+    private renderer: Renderer,
+    private transSrvc: TranslateService,
   ) { }
 
-  ngOnInit() {
+  public ngOnInit() {
     this.authState$ = this.store.select(fromRoot.getAuthState);
+    this.activeLang = this.transSrvc.currentLang;
 
     // fix the height
     const height = window.innerHeight - (this.header.nativeElement.offsetHeight + 2);
     this.renderer.setElementStyle(this.wrapper.nativeElement, 'min-height', height + 'px');
   }
 
+  public changeLang(langKey: string) {
+    if (this.activeLang !== langKey)  {
+      this.transSrvc.use(langKey);
+      this.activeLang = this.transSrvc.currentLang;
+    }
+  }
 }
