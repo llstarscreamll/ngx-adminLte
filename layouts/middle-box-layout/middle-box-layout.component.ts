@@ -19,6 +19,7 @@ import { environment as env } from './../../../../environments/environment';
   `,
   styleUrls: [
     './middle-box-layout.component.css',
+    './../../styles.css',
   ],
   encapsulation: ViewEncapsulation.None
 })
