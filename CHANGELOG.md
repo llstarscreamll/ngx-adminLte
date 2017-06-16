@@ -1,12 +1,12 @@
 # Release Notes.
 
-## 0.4.1 (2017-06-16)
+## 0.2.1 (2017-06-16)
 
 ### Fixed
 
 - Fix error importing main styles on middle-box-layout component.
 
-## 0.4 (2017-06-16)
+## 0.2 (2017-06-16)
 
 ### Added
 
