@@ -17,7 +17,7 @@
           <div [collapse]="collapseNavBar" class="collapse navbar-collapse pull-left">
 
             <ul class="nav navbar-nav">
-              <li><a routerLink="/welcome">BackOffice</a></li>
+              <li *ngIf="(authState$ | async)?.loggedIn"><a routerLink="/welcome" translate>SHELL.Dashboard</a></li>
             </ul>
 
             <!-- Search Form -->
@@ -32,16 +32,29 @@
 
           <!-- Navbar Right Menu -->
           <div class="navbar-custom-menu">
+            <ul class="nav navbar-nav">
+              <li dropdown>
+                <a role="button" dropdownToggle translate>SHELL.Lang</a>
+                <!-- mark with this asterisk the active lang -->
+                <ng-template #activeLangMark>
+                   <small class="pull-right glyphicon glyphicon-asterisk active-lang"></small>
+                </ng-template>
+                <ul *dropdownMenu class="dropdown-menu" role="menu">
+                  <li role="menuitem"><a role="button" (click)="changeLang('en')" class="dropdown-item"><span translate>SHELL.English</span><span *ngIf="activeLang != 'en'; else activeLangMark"></span></a></li>
+                  <li role="menuitem"><a role="button" (click)="changeLang('es')" class="dropdown-item"><span translate>SHELL.Spanish</span><span *ngIf="activeLang != 'es'; else activeLangMark"></span></a></li>
+                </ul>
+              </li>
+            </ul>
               
-              <!-- User Account Menu -->
-              <app-user-menu
-                  *ngIf="(authState$ | async)?.loggedIn"
-                  [user]="(authState$ | async)?.user"
-                  class="nav navbar-nav"></app-user-menu>
+            <!-- User Account Menu -->
+            <app-user-menu
+                *ngIf="(authState$ | async)?.loggedIn"
+                [user]="(authState$ | async)?.user"
+                class="nav navbar-nav"></app-user-menu>
             
             <ul *ngIf="!(authState$ | async)?.loggedIn" class="nav navbar-nav">
               <li><a class="login-link" routerLink="/auth/login" translate>SHELL.Login</a></li>
-              <li><a class="sign-up-link" routerLink="/auth/register" translate>SHELL.Sign in</a></li>
+              <li><a class="sign-up-link" routerLink="/auth/register" translate>SHELL.Sign up</a></li>
             </ul>
 
           </div>
