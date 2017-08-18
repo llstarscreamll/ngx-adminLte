@@ -7,7 +7,7 @@ import { environment as env } from './../../../../environments/environment';
 import { State as AuthState } from './../../../auth/reducers/auth.reducer';
 import * as fromRoot from './../../../reducers';
 import { MainFooterComponent } from './../../components/footer/footer.component';
-import { TranslateService } from "@ngx-translate/core";
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-nav-top-layout',
